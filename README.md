@@ -17,9 +17,13 @@ sudo apt install ansible -y
 
 ## Runbook Steps
 - clone this repo to the machine you wish to ansible
-- execute `sh ansible-workstations-ubuntu/install.sh`
-- Enjoy
-
+- `cd ansible-workstations-ubuntu`
+  Option 1:
+    - run 'install.sh' if you need to install all prerequisites (Python/Ansible/Git)
+    `./install.sh`
+  Option 2:
+    - If you already ran 'install.sh' or have all the prerequisites installed, run the ansible playbook directly
+    `ansible-playbook main.yml -i ./hosts -c local -v --ask-become-pass`
 
 ## Two Modes for Install
 
